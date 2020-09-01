@@ -2,6 +2,8 @@ package com.soran.mahmoodi.daggerexamples.di;
 
 import android.app.Application;
 
+import com.soran.mahmoodi.daggerexamples.utils.SessionManger;
+
 import javax.inject.Singleton;
 
 import dagger.BindsInstance;
@@ -13,6 +15,8 @@ import dagger.android.support.DaggerApplication;
 @Singleton
 @Component(modules = {AndroidSupportInjectionModule.class, ActivityBuilder.class, AppModule.class, ViewModelFactoryModule.class,})
 public interface AppComponent extends AndroidInjector<DaggerApplication> {
+
+    SessionManger sessionManger();
 
     @Component.Builder
     interface Builder {
