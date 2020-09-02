@@ -12,6 +12,6 @@ public abstract class MainFragmentBuilderModule {
     @ContributesAndroidInjector
     abstract ProfileFragment providerProfileFragment();
 
-    @ContributesAndroidInjector
+    @ContributesAndroidInjector()
     abstract PostsFragment providerPostFragment();
 }

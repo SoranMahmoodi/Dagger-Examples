@@ -6,10 +6,11 @@ import java.lang.annotation.RetentionPolicy;
 
 import javax.inject.Scope;
 
-import dagger.MapKey;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
 
 @Scope
 @Documented
-@Retention(RetentionPolicy.RUNTIME)
+@Retention(RUNTIME)
 public @interface AuthScope {
 }

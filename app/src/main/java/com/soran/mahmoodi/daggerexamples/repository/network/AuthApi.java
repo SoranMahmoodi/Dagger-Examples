@@ -1,5 +1,6 @@
 package com.soran.mahmoodi.daggerexamples.repository.network;
 
+import com.soran.mahmoodi.daggerexamples.model.Post;
 import com.soran.mahmoodi.daggerexamples.model.User;
 
 import java.util.List;
@@ -18,5 +19,5 @@ public interface AuthApi {
     Flowable<User> getUser(@Path("id") int id);
 
     @GET("posts")
-    Flowable<List<User>> getPosts(@Query("userId") int id);
+    Flowable<List<Post>> getPosts(@Query("userId") int id);
 }

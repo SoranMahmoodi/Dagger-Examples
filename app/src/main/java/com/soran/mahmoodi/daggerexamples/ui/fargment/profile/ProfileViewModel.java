@@ -6,7 +6,6 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.soran.mahmoodi.daggerexamples.model.User;
-import com.soran.mahmoodi.daggerexamples.repository.RepositoryMaongerImpl;
 import com.soran.mahmoodi.daggerexamples.utils.AuthResource;
 import com.soran.mahmoodi.daggerexamples.utils.SessionManger;
 

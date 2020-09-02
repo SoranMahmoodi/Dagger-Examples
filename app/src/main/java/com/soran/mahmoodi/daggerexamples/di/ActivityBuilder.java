@@ -4,6 +4,7 @@ import com.soran.mahmoodi.daggerexamples.di.auth.AuthModule;
 import com.soran.mahmoodi.daggerexamples.di.auth.AuthScope;
 import com.soran.mahmoodi.daggerexamples.di.auth.AuthViewModelModule;
 import com.soran.mahmoodi.daggerexamples.di.main.MainFragmentBuilderModule;
+import com.soran.mahmoodi.daggerexamples.di.main.MainModule;
 import com.soran.mahmoodi.daggerexamples.di.main.MainScope;
 import com.soran.mahmoodi.daggerexamples.di.main.MainViewModelModule;
 import com.soran.mahmoodi.daggerexamples.ui.activity.auth.AuthActivity;
@@ -20,7 +21,7 @@ public abstract class ActivityBuilder {
     abstract AuthActivity providerAuthActivity();
 
     @MainScope
-    @ContributesAndroidInjector(modules = {MainFragmentBuilderModule.class, MainViewModelModule.class})
+    @ContributesAndroidInjector(modules = {MainFragmentBuilderModule.class, MainViewModelModule.class, MainModule.class})
     abstract MainActivity providerMainActivity();
 
 }
