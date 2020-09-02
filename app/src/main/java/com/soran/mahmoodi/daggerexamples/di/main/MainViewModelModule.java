@@ -3,7 +3,8 @@ package com.soran.mahmoodi.daggerexamples.di.main;
 import androidx.lifecycle.ViewModel;
 
 import com.soran.mahmoodi.daggerexamples.di.ViewModelKay;
-import com.soran.mahmoodi.daggerexamples.ui.fargment.post.PostViewModel;
+import com.soran.mahmoodi.daggerexamples.ui.fargment.post.PostsViewModel;
+import com.soran.mahmoodi.daggerexamples.ui.fargment.profile.ProfileViewModel;
 
 import dagger.Binds;
 import dagger.Module;
@@ -14,7 +15,11 @@ public abstract class MainViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKay(PostViewModel.class)
-    abstract ViewModel providerPostViewModel(PostViewModel postViewModel);
+    @ViewModelKay(ProfileViewModel.class)
+    abstract ViewModel providerProfileViewModel(ProfileViewModel profileViewModel);
 
+    @Binds
+    @IntoMap
+    @ViewModelKay(PostsViewModel.class)
+    abstract ViewModel providerPostViewModel(PostsViewModel postsViewModel);
 }

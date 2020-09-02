@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.request.RequestOptions;
 import com.soran.mahmoodi.daggerexamples.R;
+import com.soran.mahmoodi.daggerexamples.repository.network.AuthApi;
 import com.soran.mahmoodi.daggerexamples.utils.Constants;
 
 import javax.inject.Singleton;
@@ -30,6 +31,12 @@ public class AppModule {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+    }
+
+    @Singleton
+    @Provides
+    static AuthApi providerAuthApi(Retrofit retrofit) {
+        return retrofit.create(AuthApi.class);
     }
 
     @Singleton

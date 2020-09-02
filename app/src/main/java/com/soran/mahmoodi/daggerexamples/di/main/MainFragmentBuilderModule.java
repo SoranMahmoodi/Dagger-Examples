@@ -1,6 +1,7 @@
 package com.soran.mahmoodi.daggerexamples.di.main;
 
-import com.soran.mahmoodi.daggerexamples.ui.fargment.post.PostFragment;
+import com.soran.mahmoodi.daggerexamples.ui.fargment.post.PostsFragment;
+import com.soran.mahmoodi.daggerexamples.ui.fargment.profile.ProfileFragment;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -9,5 +10,8 @@ import dagger.android.ContributesAndroidInjector;
 public abstract class MainFragmentBuilderModule {
 
     @ContributesAndroidInjector
-    abstract PostFragment providerFragmentPost();
+    abstract ProfileFragment providerProfileFragment();
+
+    @ContributesAndroidInjector
+    abstract PostsFragment providerPostFragment();
 }

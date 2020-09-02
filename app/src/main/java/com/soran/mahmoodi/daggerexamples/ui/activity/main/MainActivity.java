@@ -1,7 +1,6 @@
 package com.soran.mahmoodi.daggerexamples.ui.activity.main;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,7 +9,8 @@ import android.view.MenuItem;
 
 import com.soran.mahmoodi.daggerexamples.R;
 import com.soran.mahmoodi.daggerexamples.ui.base.BaseActivity;
-import com.soran.mahmoodi.daggerexamples.ui.fargment.post.PostFragment;
+import com.soran.mahmoodi.daggerexamples.ui.fargment.post.PostsFragment;
+import com.soran.mahmoodi.daggerexamples.ui.fargment.profile.ProfileFragment;
 
 public class MainActivity extends BaseActivity {
 
@@ -22,7 +22,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void testFragment(){
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new PostFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new PostsFragment()).commit();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
