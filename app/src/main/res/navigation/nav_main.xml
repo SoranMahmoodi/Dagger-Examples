@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/profileFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.soran.mahmoodi.daggerexamples.ui.fargment.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="com.soran.mahmoodi.daggerexamples.ui.fargment.post.PostsFragment"
+        android:label="PostsFragment" />
+</navigation>

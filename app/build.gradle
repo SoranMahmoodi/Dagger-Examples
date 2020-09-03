@@ -71,5 +71,9 @@ dependencies {
     // Reactive Streams (convert Observable to LiveData)
     def reactivestreams_version = "1.1.1"
     implementation "android.arch.lifecycle:reactivestreams:$reactivestreams_version"
+    //Navigation
+    def nav_version = "2.3.0"
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
 
 }
